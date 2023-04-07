@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/simpleListId"
+    android:layout_height="60dp">
+    <TextView
+        android:id="@+id/myListText"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:textColor="@color/Cyan"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

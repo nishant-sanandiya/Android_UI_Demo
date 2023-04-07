@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">UI_Demo</string>
+    <string name="MainActivityTitle">Profile</string>
+    <string name="titleText">Hi Nishant</string>
+    <string name="subTitleText">Here are your projects</string>
+    <string name="ratingTitle">Rate My App</string>
+    <string name="check_permission">Check Permission</string>
+    <string-array name="array_technology">
+        <item>Android</item>
+        <item>Java</item>
+        <item>Php</item>
+        <item>Hadoop</item>
+        <item>Sap</item>
+        <item>Python</item>
+        <item>Ajax</item>
+        <item>C++</item>
+        <item>Ruby</item>
+        <item>Rails</item>
+        <item>.Net</item>
+        <item>Perl</item>
+    </string-array>
+</resources>
