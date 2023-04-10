@@ -1,11 +1,11 @@
+package com.example.ui_demo
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
-import com.example.ui_demo.DummyData
-import com.example.ui_demo.R
 
 class SimpleListAdapter(context: Context, items: ArrayList<DummyData>) : BaseAdapter() {
     private val context: Context
@@ -24,17 +24,17 @@ class SimpleListAdapter(context: Context, items: ArrayList<DummyData>) : BaseAda
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?):
-            View? {
-        var convertView: View? = convertView
-        if (convertView == null) {
-            convertView = LayoutInflater.from(context)
+            View {
+        var tempConvertView: View? = convertView
+        if (tempConvertView == null) {
+            tempConvertView = LayoutInflater.from(context)
                 .inflate(R.layout.mylist, parent, false)
         }
-        val currentItem = getItem(position) as DummyData
-        val textViewItemName = convertView
+        getItem(position) as DummyData
+        val textViewItemName = tempConvertView
             ?.findViewById(R.id.myListText) as TextView
-        textViewItemName.setText(position.toString())
-        return convertView
+        textViewItemName.text = position.toString()
+        return tempConvertView
     }
 
     init {

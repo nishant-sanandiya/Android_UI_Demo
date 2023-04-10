@@ -1,5 +1,5 @@
 package com.example.ui_demo
 
-class DummyData(var image: String, var title: String, var subTitle: String, var taskNumber: Int) {
+class DummyData(var title: String, var subTitle: String, var taskNumber: Int) {
 
 }
