@@ -24,6 +24,7 @@ class MainActivity2 : AppCompatActivity(), BaseActivity {
         val adapter = HorizontalCardAdapter(dataSet = tempList, context = this)
         listView?.adapter = adapter
         listView?.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+//        listView?.layoutManager = GridLayoutManager(this, 2)
     }
 
     private fun getData(): List<DummyData> {

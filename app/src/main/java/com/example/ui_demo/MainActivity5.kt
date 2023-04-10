@@ -1,14 +1,15 @@
 package com.example.ui_demo
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.GridView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity5 : AppCompatActivity() ,BaseActivity {
 
-    private lateinit var gridListView : GridView
+class MainActivity5 : AppCompatActivity(), BaseActivity {
+
+    private lateinit var gridListView: GridView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,8 +23,15 @@ class MainActivity5 : AppCompatActivity() ,BaseActivity {
         title = headerText
 
         val dummyDataList = getData()
-        val gridListAdapter = GridAdapter(this,dummyDataList)
+        val gridListAdapter = GridAdapter(this, dummyDataList)
         gridListView.adapter = gridListAdapter
+        gridListView.onItemClickListener = OnItemClickListener { parent, v, position, id ->
+            Toast.makeText(
+                this,
+                "" + position,
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     override fun uiBinding() {
@@ -33,8 +41,8 @@ class MainActivity5 : AppCompatActivity() ,BaseActivity {
     override fun attachListners() {
     }
 
-    private fun getData (): ArrayList<GridDataModel> {
-        val list : ArrayList<GridDataModel> = ArrayList()
+    private fun getData(): ArrayList<GridDataModel> {
+        val list: ArrayList<GridDataModel> = ArrayList()
         list.add(GridDataModel("DSA"))
         list.add(GridDataModel("JAVA"))
         list.add(GridDataModel("C++"))
