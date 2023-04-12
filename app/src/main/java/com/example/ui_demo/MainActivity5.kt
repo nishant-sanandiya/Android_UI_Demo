@@ -1,7 +1,9 @@
 package com.example.ui_demo
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.AdapterView.OnItemClickListener
+import android.widget.Button
 import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,11 +12,12 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity5 : AppCompatActivity(), BaseActivity {
 
     private lateinit var gridListView: GridView
-
+    private lateinit var  goToFragmentScreenButton : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main5)
         uiBinding()
+        attachListners()
         setUp()
     }
 
@@ -36,9 +39,15 @@ class MainActivity5 : AppCompatActivity(), BaseActivity {
 
     override fun uiBinding() {
         gridListView = findViewById(R.id.gridLayout)
+        goToFragmentScreenButton = findViewById(R.id.goToFragmentScreen)
     }
 
     override fun attachListners() {
+        goToFragmentScreenButton.setOnClickListener {
+            val intentActivity6 = Intent(this,MainActivity6::class.java)
+            intentActivity6.putExtra("headerTitle","Fragment Demo")
+            startActivity(intentActivity6);
+        }
     }
 
     private fun getData(): ArrayList<GridDataModel> {

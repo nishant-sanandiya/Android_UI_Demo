@@ -19,4 +19,15 @@
         <item>.Net</item>
         <item>Perl</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment_1">fragment 1</string>
+    <string name="hello_blank_fragment_2">fragment 2</string>
+    <string name="press">Increase</string>
+    <string name="_91_7777909302">+91 7777909302</string>
+    <string name="nishant_gmail_com">nishant@gmail.com</string>
+    <string name="hii_nishant_sanandiya">Hii , Nishant Sanandiya</string>
+    <string name="button_3">Button 3</string>
+    <string name="button_2">Button 2</string>
+    <string name="button_4">Button 4</string>
+    <string name="button_1">Button 1</string>
 </resources>

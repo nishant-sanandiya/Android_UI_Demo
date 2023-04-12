@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
-class HorizontalCardAdapter(private val dataSet: List<DummyData>, private val context:Context) :
+class HorizontalCardAdapter(private val dataSet: List<DummyData>, private val context: Context) :
     RecyclerView.Adapter<HorizontalCardAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

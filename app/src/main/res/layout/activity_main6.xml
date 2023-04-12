@@ -6,4 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity6">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment1"
+        android:name="com.example.ui_demo.fragment_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fragment2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_1" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment2"
+        android:name="com.example.ui_demo.fragment_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/fragment1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

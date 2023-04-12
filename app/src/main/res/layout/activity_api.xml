@@ -4,29 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".ApiActivity">
 
     <Button
-        android:id="@+id/goToFragmentScreen"
-        android:layout_width="match_parent"
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GO TO NEXT"
-        android:layout_marginTop="@dimen/margin_15"
-        android:layout_marginHorizontal="@dimen/margin_15"
+        android:text="Retry"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <GridView
-        android:id="@+id/gridLayout"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/margin_15"
-        android:background="@color/Blue_Grotto"
-        android:numColumns="3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goToFragmentScreen"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/retryButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
