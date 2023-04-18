@@ -1,7 +1,6 @@
-package com.example.ui_demo
+package com.example.ui_demo.Adapters
 
 import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ui_demo.ApiModels.Data
+import com.example.ui_demo.R
 
 class UserAdapter(private val dataSet: List<Data>, private val context: Context) :
     RecyclerView.Adapter<UserAdapter.ViewHolder>() {
@@ -25,10 +25,6 @@ class UserAdapter(private val dataSet: List<Data>, private val context: Context)
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
             .inflate(R.layout.user_item, viewGroup, false)
-        view.setOnClickListener {
-            val intentInstance = Intent(context, MainActivity3::class.java)
-            context.startActivity(intentInstance)
-        }
         return ViewHolder(view)
     }
 

@@ -1,4 +1,4 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
 import android.Manifest.permission.ACCESS_FINE_LOCATION
 import android.Manifest.permission.CAMERA
@@ -10,9 +10,12 @@ import android.widget.ListView
 import android.widget.RatingBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.example.ui_demo.Models.DummyData
+import com.example.ui_demo.R
+import com.example.ui_demo.Adapters.SimpleListAdapter
 
 
-class MainActivity4 : AppCompatActivity(),BaseActivity {
+class MainActivity4 : AppCompatActivity(), BaseActivity {
 
     private lateinit var checkPermissionButtonView: Button
     private lateinit var ratingView: RatingBar

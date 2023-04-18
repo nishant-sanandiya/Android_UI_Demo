@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity6">
+    tools:context=".Activities.MainActivity6">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment1"
-        android:name="com.example.ui_demo.fragment_1"
+        android:name="com.example.ui_demo.Fragments.fragment_1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment2"
-        android:name="com.example.ui_demo.fragment_2"
+        android:name="com.example.ui_demo.Fragments.fragment_2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

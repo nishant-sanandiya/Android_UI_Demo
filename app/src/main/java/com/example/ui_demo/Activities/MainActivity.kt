@@ -1,16 +1,17 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.ButtonBarLayout
+import com.example.ui_demo.R
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
 
     private var btn: Button? = null
     private var nextApiActivityButtonView: Button? = null
+    private var serviceActivityBtnView: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,8 +27,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
                 val navigatorIntent = Intent(this, MainActivity2::class.java)
                 startActivity(navigatorIntent)
             }
-            nextApiActivityButtonView->{
+            nextApiActivityButtonView -> {
                 val navigatorIntent = Intent(this, ApiActivity::class.java)
+                startActivity(navigatorIntent)
+            }
+            serviceActivityBtnView -> {
+                val navigatorIntent = Intent(this, ServiceDemo::class.java)
                 startActivity(navigatorIntent)
             }
         }
@@ -36,10 +41,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
     override fun uiBinding() {
         btn = findViewById(R.id.btn)
         nextApiActivityButtonView = findViewById(R.id.buttonx)
+        serviceActivityBtnView = findViewById(R.id.serviceActivityBtn)
     }
 
     override fun attachListners() {
         btn?.setOnClickListener(this)
         nextApiActivityButtonView?.setOnClickListener(this)
+        serviceActivityBtnView?.setOnClickListener(this)
     }
 }

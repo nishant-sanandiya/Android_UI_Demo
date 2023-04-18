@@ -1,6 +1,5 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +7,7 @@ import android.webkit.WebView
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.widget.SwitchCompat
+import com.example.ui_demo.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity3 : AppCompatActivity(), BaseActivity {

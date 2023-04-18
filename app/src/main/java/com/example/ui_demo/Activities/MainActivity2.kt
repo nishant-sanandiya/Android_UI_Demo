@@ -1,9 +1,12 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ui_demo.Models.DummyData
+import com.example.ui_demo.Adapters.HorizontalCardAdapter
+import com.example.ui_demo.R
 
 
 class MainActivity2 : AppCompatActivity(), BaseActivity {

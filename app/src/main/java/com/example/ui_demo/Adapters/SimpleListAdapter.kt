@@ -1,4 +1,4 @@
-package com.example.ui_demo
+package com.example.ui_demo.Adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import com.example.ui_demo.Models.DummyData
+import com.example.ui_demo.R
 
 class SimpleListAdapter(context: Context, items: ArrayList<DummyData>) : BaseAdapter() {
     private val context: Context

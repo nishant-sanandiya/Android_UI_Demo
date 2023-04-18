@@ -1,8 +1,9 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.ui_demo.R
 
 class MainActivity6 : AppCompatActivity(), BaseActivity, View.OnClickListener {
 

@@ -1,15 +1,14 @@
-package com.example.ui_demo
+package com.example.ui_demo.Fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.ui_demo.R
 
 
 class fragment_1 : Fragment() {

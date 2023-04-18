@@ -16,7 +16,6 @@ object RetrofitClient {
             .addInterceptor(mHttpLoggingInterceptor)
             .build()
 
-
         var retrofit: Retrofit = retrofit2.Retrofit.Builder()
             .baseUrl("https://reqres.in")
             .addConverterFactory(GsonConverterFactory.create())

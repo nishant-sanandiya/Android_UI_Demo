@@ -1,4 +1,4 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.widget.Button
 import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ui_demo.Adapters.GridAdapter
+import com.example.ui_demo.Models.GridDataModel
+import com.example.ui_demo.R
 
 
 class MainActivity5 : AppCompatActivity(), BaseActivity {
@@ -44,7 +47,7 @@ class MainActivity5 : AppCompatActivity(), BaseActivity {
 
     override fun attachListners() {
         goToFragmentScreenButton.setOnClickListener {
-            val intentActivity6 = Intent(this,MainActivity6::class.java)
+            val intentActivity6 = Intent(this, MainActivity6::class.java)
             intentActivity6.putExtra("headerTitle","Fragment Demo")
             startActivity(intentActivity6);
         }

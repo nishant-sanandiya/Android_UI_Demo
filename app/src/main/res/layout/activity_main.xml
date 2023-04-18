@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -114,14 +114,24 @@
         </LinearLayout>
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonx"
+        android:id="@+id/serviceActivityBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="API Activity"
+        android:text="@string/service_activity"
         android:layout_marginVertical="@dimen/margin_15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/api_activity"
+        android:layout_marginVertical="@dimen/margin_15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serviceActivityBtn"
         app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         />
     <ScrollView

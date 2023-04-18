@@ -30,4 +30,17 @@
     <string name="button_2">Button 2</string>
     <string name="button_4">Button 4</string>
     <string name="button_1">Button 1</string>
+    <string name="notification_title">Service running</string>
+    <string name="notification_message">Service uses user location</string>
+    <string name="ticker_text">Ticker Text</string>
+    <string name="CHANNEL_DEFAULT_IMPORTANCE">NotificationChannelId</string>
+    <string name="retry">Retry</string>
+    <string name="service_activity">Service Activity</string>
+    <string name="api_activity">API Activity</string>
+    <string name="start_foreground_intent_service">Start Foreground Intent Service</string>
+    <string name="stop_foreground_intent_service">Stop Foreground Intent Service</string>
+    <string name="start_foreground_service">Start Foreground Service</string>
+    <string name="stop_foreground_service">Stop Foreground Service</string>
+    <string name="enter_text">Enter text</string>
+    <string name="send_to_service">Send To Service</string>
 </resources>

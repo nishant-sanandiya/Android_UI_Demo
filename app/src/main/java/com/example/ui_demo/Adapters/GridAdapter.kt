@@ -1,4 +1,4 @@
-package com.example.ui_demo
+package com.example.ui_demo.Adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import com.example.ui_demo.Models.GridDataModel
+import com.example.ui_demo.R
 
 class GridAdapter(context: Context, list: ArrayList<GridDataModel>) :
     ArrayAdapter<GridDataModel?>(context, 0, list as List<GridDataModel?>) {

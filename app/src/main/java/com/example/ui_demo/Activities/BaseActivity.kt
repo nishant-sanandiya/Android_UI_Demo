@@ -1,4 +1,4 @@
-package com.example.ui_demo
+package com.example.ui_demo.Activities
 
 interface BaseActivity {
     fun uiBinding()
