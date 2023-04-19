@@ -3,6 +3,7 @@
 package com.example.ui_demo.Activities
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -106,7 +107,6 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
                 swipeRefreshLayout.setRefreshing(false)
             }
         })
-
     }
 
     override fun onStart() {

@@ -43,4 +43,7 @@
     <string name="stop_foreground_service">Stop Foreground Service</string>
     <string name="enter_text">Enter text</string>
     <string name="send_to_service">Send To Service</string>
+    <string name="message_lock_running">message_lock_running</string>
+    <string name="go_to_broadcast_demo">Go to BroadCast Demo</string>
+    <string name="send_broadcast_message">Send Broadcast message</string>
 </resources>

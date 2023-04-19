@@ -1,5 +1,6 @@
 package com.example.ui_demo.Activities
 
+import android.Manifest
 import android.app.Notification
 import android.app.PendingIntent
 import android.content.ComponentName
@@ -15,6 +16,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import com.example.ui_demo.R
 import com.example.ui_demo.Services.BindService
 import com.example.ui_demo.Services.MyIntentService
@@ -44,9 +46,11 @@ class ServiceDemo : AppCompatActivity(), BaseActivity {
             val binder = service as BindService.LocalBinder
             mService = binder.getService()
             mBound = true
+            Log.d("Lifecycle", "onServiceConnected Called")
         }
         override fun onServiceDisconnected(arg0: ComponentName) {
             mBound = false
+            Log.d("Lifecycle", "onServiceDisconnected Called")
         }
     }
 
@@ -56,11 +60,20 @@ class ServiceDemo : AppCompatActivity(), BaseActivity {
         uiBinding()
         attachListners()
         runAsyncTask()
+        requestPermissions()
+        Log.d("Lifecycle", "onCreate Activity Called")
+    }
+
+    private fun requestPermissions () {
+        ActivityCompat.requestPermissions(
+            this, arrayOf(Manifest.permission.POST_NOTIFICATIONS), 100
+        )
     }
 
     override fun onStart() {
         super.onStart()
         // Bind to BindService.
+        Log.d("Lifecycle", "onStart Activity Called")
         Intent(this, BindService::class.java).also { intent ->
             bindService(intent, connection, Context.BIND_AUTO_CREATE)
         }
@@ -68,6 +81,7 @@ class ServiceDemo : AppCompatActivity(), BaseActivity {
 
     override fun onStop() {
         super.onStop()
+        Log.d("Lifecycle", "onStop Activity Called")
         unbindService(connection)
         mBound = false
     }
@@ -139,42 +153,10 @@ class ServiceDemo : AppCompatActivity(), BaseActivity {
         }
     }
 
-    private fun startNotification() {
-        val pendingIntent: PendingIntent =
-            Intent(this, MainActivity5::class.java).let { notificationIntent ->
-                PendingIntent.getActivity(
-                    this, 0, notificationIntent,
-                    PendingIntent.FLAG_IMMUTABLE
-                )
-            }
-        val notification: Notification = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            Notification.Builder(
-                this,
-                R.string.CHANNEL_DEFAULT_IMPORTANCE.toString()
-            )
-                .setContentTitle(getText(R.string.notification_title))
-                .setContentText(getText(R.string.notification_message))
-                .setSmallIcon(R.drawable.floating_bg)
-                .setContentIntent(pendingIntent)
-                .setTicker(getText(R.string.ticker_text))
-                .setPriority(Notification.PRIORITY_MAX)
-                .setOngoing(true) // for force display in android 13 and above (otherwise is swipe able)
-                .build()
-        } else {
-            Notification.Builder(this)
-                .setContentTitle(getText(R.string.notification_title))
-                .setContentText(getText(R.string.notification_message))
-                .setSmallIcon(R.drawable.floating_bg)
-                .setContentIntent(pendingIntent)
-                .setTicker(getText(R.string.ticker_text))
-                .setPriority(Notification.PRIORITY_MAX)
-                .setOngoing(true) // for force display in android 13 and above (otherwise is swipe able)
-                .build()
-        }
-//        startForeground(1, notification)
-    }
-
     private fun getRandomNumber() {
+        Intent(this,BindService::class.java).also {
+            startService(it)
+        }
         if (mBound) {
             // Call a method from the LocalService.
             // However, if this call is something that might hang, then put this request

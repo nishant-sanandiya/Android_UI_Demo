@@ -1,7 +1,6 @@
 package com.example.ui_demo.Utils
 
 import android.app.ProgressDialog
-import android.content.Context
 import android.os.AsyncTask
 import android.os.Handler
 import android.util.Log

@@ -132,8 +132,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/serviceActivityBtn"
-        app:layout_constraintBottom_toTopOf="@+id/ScrollView"
         />
+    <Button
+        android:id="@+id/nextBroadcastActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_15"
+        android:text="@string/go_to_broadcast_demo"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonx" />
     <ScrollView
         android:id="@+id/ScrollView"
         android:layout_width="match_parent"
@@ -142,7 +151,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonx">
+        app:layout_constraintTop_toBottomOf="@+id/nextBroadcastActivityBtn">
 
         <LinearLayout
             android:layout_width="match_parent"

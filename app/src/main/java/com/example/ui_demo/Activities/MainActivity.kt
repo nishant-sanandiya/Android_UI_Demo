@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
     private var btn: Button? = null
     private var nextApiActivityButtonView: Button? = null
     private var serviceActivityBtnView: Button? = null
+    private lateinit var nextBroadcastActivityBtnView : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +36,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
                 val navigatorIntent = Intent(this, ServiceDemo::class.java)
                 startActivity(navigatorIntent)
             }
+            nextBroadcastActivityBtnView ->{
+                Intent(this,BroadcastReceiverDemo::class.java).let {
+                    startActivity(it)
+                }
+            }
         }
     }
 
@@ -42,11 +48,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
         btn = findViewById(R.id.btn)
         nextApiActivityButtonView = findViewById(R.id.buttonx)
         serviceActivityBtnView = findViewById(R.id.serviceActivityBtn)
+        nextBroadcastActivityBtnView = findViewById(R.id.nextBroadcastActivityBtn)
     }
 
     override fun attachListners() {
         btn?.setOnClickListener(this)
         nextApiActivityButtonView?.setOnClickListener(this)
         serviceActivityBtnView?.setOnClickListener(this)
+        nextBroadcastActivityBtnView.setOnClickListener(this)
     }
 }
