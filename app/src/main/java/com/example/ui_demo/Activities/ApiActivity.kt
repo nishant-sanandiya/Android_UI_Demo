@@ -2,8 +2,8 @@
 
 package com.example.ui_demo.Activities
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
-import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +18,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import com.example.ui_demo.Adapters.UserAdapter
 import com.example.ui_demo.ApiModels.ApiInterface
 import com.example.ui_demo.ApiModels.Data
@@ -74,9 +73,9 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            nestedScrollLayout.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+            nestedScrollLayout.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, _, _, _, _ ->
                 if (!v.canScrollVertically(1)) {
-                    if (!isLoading && !(currentPage == lastPage)) {
+                    if (!isLoading && currentPage != lastPage) {
                         lifecycleScope.launchWhenCreated {
                             getUserList(currentPage + 1)
                         }
@@ -89,7 +88,7 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
                 if (!recyclerView.canScrollVertically(1)) {
-                    if (!isLoading && !(currentPage == lastPage)) {
+                    if (!isLoading && currentPage != lastPage) {
                         if (dy > 0) {
                             lifecycleScope.launchWhenCreated {
                                 getUserList(currentPage + 1)
@@ -100,13 +99,13 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
             }
         })
 
-        swipeRefreshLayout.setOnRefreshListener(OnRefreshListener {
+        swipeRefreshLayout.setOnRefreshListener {
             lifecycleScope.launchWhenCreated {
-                swipeRefreshLayout.setRefreshing(true)
+                swipeRefreshLayout.isRefreshing = true
                 getUserList(firstPage)
-                swipeRefreshLayout.setRefreshing(false)
+                swipeRefreshLayout.isRefreshing = false
             }
-        })
+        }
     }
 
     override fun onStart() {
@@ -118,6 +117,7 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private suspend fun getUserList(pageNumber: Int) {
         if (!isLoading) {
             isLoading = true
@@ -127,7 +127,7 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
                 val response = apiInterface.getAllUsersByPage(pageNumber)
                 if (response.isSuccessful) {
                     val apiData = response.body()?.data
-                    val apiBody = response.body();
+                    val apiBody = response.body()
                     if (apiBody != null && apiData != null) {
                         if (apiBody.page == firstPage) {
                             listDataArray.clear()
