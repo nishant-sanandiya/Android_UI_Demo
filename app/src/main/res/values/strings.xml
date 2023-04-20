@@ -46,4 +46,9 @@
     <string name="message_lock_running">message_lock_running</string>
     <string name="go_to_broadcast_demo">Go to BroadCast Demo</string>
     <string name="send_broadcast_message">Send Broadcast message</string>
+    <string name="go_to_dialog_activity">Go To Dialog Activity</string>
+    <string name="show_alert">Show Alert</string>
+    <string name="ok">CLOSE</string>
+    <string name="texto">Hey</string>
+    <string name="help">Help</string>
 </resources>

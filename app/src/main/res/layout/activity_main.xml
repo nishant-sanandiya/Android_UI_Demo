@@ -143,6 +143,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonx" />
+
+    <Button
+        android:id="@+id/nextDialogActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_15"
+        android:text="@string/go_to_dialog_activity"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nextBroadcastActivityBtn" />
     <ScrollView
         android:id="@+id/ScrollView"
         android:layout_width="match_parent"
@@ -151,7 +162,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nextBroadcastActivityBtn">
+        app:layout_constraintTop_toBottomOf="@+id/nextDialogActivityBtn">
 
         <LinearLayout
             android:layout_width="match_parent"

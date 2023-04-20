@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/helpMenu"
+        android:icon="@drawable/man"
+        android:title="@string/help"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/contactMenu"
+        android:title="@string/help" />
+    <group>
+        <item
+            android:id="@+id/typeMenu"
+            android:icon="@drawable/floating_bg"
+            android:title="Type" />
+        <item
+            android:id="@+id/help"
+            android:title="@string/help" />
+    </group>
+</menu>

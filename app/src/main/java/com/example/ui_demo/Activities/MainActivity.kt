@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
     private var nextApiActivityButtonView: Button? = null
     private var serviceActivityBtnView: Button? = null
     private lateinit var nextBroadcastActivityBtnView : Button
+    private lateinit var nextDialogActivityBtnView : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +42,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
                     startActivity(it)
                 }
             }
+            nextDialogActivityBtnView ->{
+                Intent(this,Dialogs::class.java).let {
+                    startActivity(it)
+                }
+            }
         }
     }
 
@@ -49,6 +55,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
         nextApiActivityButtonView = findViewById(R.id.buttonx)
         serviceActivityBtnView = findViewById(R.id.serviceActivityBtn)
         nextBroadcastActivityBtnView = findViewById(R.id.nextBroadcastActivityBtn)
+        nextDialogActivityBtnView = findViewById(R.id.nextDialogActivityBtn)
     }
 
     override fun attachListners() {
@@ -56,5 +63,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, BaseActivity {
         nextApiActivityButtonView?.setOnClickListener(this)
         serviceActivityBtnView?.setOnClickListener(this)
         nextBroadcastActivityBtnView.setOnClickListener(this)
+        nextDialogActivityBtnView.setOnClickListener(this)
     }
 }
