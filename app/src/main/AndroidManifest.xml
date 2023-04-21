@@ -23,15 +23,26 @@
         android:usesCleartextTraffic="true"
         android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
-        <activity
-            android:name=".Activities.Dialogs"
-            android:exported="false" />
+
 
         <receiver
             android:name=".Broadcaster.MyReceiver"
             android:enabled="true"
             android:exported="false" />
 
+
+        <activity
+            android:name=".Activities.Drawer"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Dialogs"
+            android:exported="false" />
         <activity
             android:name=".Activities.BroadcastReceiverDemo"
             android:exported="false" />
@@ -75,11 +86,12 @@
         <activity
             android:name=".Activities.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
