@@ -47,7 +47,7 @@ class Drawer : AppCompatActivity(), BaseActivity, NavigationView.OnNavigationIte
         toolbar = findViewById(R.id.drawerToolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        toggle.syncState();
+        toggle.syncState()
     }
 
     private fun drawerAttachListeners() {
