@@ -66,4 +66,6 @@
     <string name="activity">Activity</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="title_activity_default_drawer">Default_Drawer</string>
+    <string name="press_for_more">Press For More</string>
 </resources>

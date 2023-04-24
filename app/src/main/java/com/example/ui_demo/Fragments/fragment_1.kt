@@ -36,7 +36,6 @@ class fragment_1 : Fragment() {
             count_1 = count.toInt();
             fragment1Text?.text = count_1.toString()
         }
-
         return v
     }
 
