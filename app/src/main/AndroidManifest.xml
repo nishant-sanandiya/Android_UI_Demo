@@ -24,6 +24,12 @@
         android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.RegisterUser"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
             android:name=".Activities.TabActivity"
             android:exported="false" />
         <activity
@@ -50,7 +56,7 @@
             android:name=".Activities.Drawer"
             android:exported="true"
             android:label="@string/title_activity_default_drawer"
-            android:theme="@style/Theme.UI_Demo.NoActionBar"></activity>
+            android:theme="@style/Theme.UI_Demo.NoActionBar" />
         <activity
             android:name=".Activities.Dialogs"
             android:exported="false" />
