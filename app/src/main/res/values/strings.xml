@@ -68,4 +68,13 @@
     <string name="close">close</string>
     <string name="title_activity_default_drawer">Default_Drawer</string>
     <string name="press_for_more">Press For More</string>
+    <string name="title_activity_tab">Tab</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="messages_fragment">Messages Fragment</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to_drawer">GO TO Drawer</string>
 </resources>

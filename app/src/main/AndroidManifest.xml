@@ -24,12 +24,16 @@
         android:windowSoftInputMode="adjustResize"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.TabActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.SplashActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".Activities.Default_Drawer"
@@ -46,12 +50,7 @@
             android:name=".Activities.Drawer"
             android:exported="true"
             android:label="@string/title_activity_default_drawer"
-            android:theme="@style/Theme.UI_Demo.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.UI_Demo.NoActionBar"></activity>
         <activity
             android:name=".Activities.Dialogs"
             android:exported="false" />

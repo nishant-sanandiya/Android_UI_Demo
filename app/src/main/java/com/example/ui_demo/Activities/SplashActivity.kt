@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun navigate() {
-        Intent(this, Default_Drawer::class.java).let {
+        Intent(this, TabActivity::class.java).let {
             startActivity(it)
         }
     }

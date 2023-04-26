@@ -34,9 +34,9 @@ class Drawer : AppCompatActivity(), BaseActivity, NavigationView.OnNavigationIte
     }
 
     private fun drawerUiBinding() {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+//        val navController = findNavController(R.id.nav_host_fragment_content_main)
         navigationView = findViewById(R.id.navView)
-        navigationView.setupWithNavController(navController)
+//        navigationView.setupWithNavController(navController)
         drawerLayout = findViewById(R.id.activity_drawer)
         toggle = ActionBarDrawerToggle(
             this,
@@ -59,7 +59,6 @@ class Drawer : AppCompatActivity(), BaseActivity, NavigationView.OnNavigationIte
     }
 
     override fun attachListners() {
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

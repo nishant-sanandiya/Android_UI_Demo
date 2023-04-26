@@ -10,9 +10,5 @@
         android:name="com.example.ui_demo.Fragments.fragment_1"
         android:label="fragment_1"
         tools:layout="@layout/fragment_1" />
-    <fragment
-        android:id="@+id/fragment_2"
-        android:name="com.example.ui_demo.Fragments.fragment_2"
-        android:label="fragment_2"
-        tools:layout="@layout/fragment_2" />
+
 </navigation>
