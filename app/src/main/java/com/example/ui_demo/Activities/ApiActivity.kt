@@ -23,6 +23,8 @@ import com.example.ui_demo.ApiModels.ApiInterface
 import com.example.ui_demo.ApiModels.Data
 import com.example.ui_demo.ApiModels.RetrofitClient
 import com.example.ui_demo.R
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class ApiActivity : AppCompatActivity(), BaseActivity {
 
@@ -105,6 +107,7 @@ class ApiActivity : AppCompatActivity(), BaseActivity {
                 getUserList(firstPage)
                 swipeRefreshLayout.isRefreshing = false
             }
+            GlobalScope.launch {  }
         }
     }
 

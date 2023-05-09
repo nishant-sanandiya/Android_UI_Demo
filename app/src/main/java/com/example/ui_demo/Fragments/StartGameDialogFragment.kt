@@ -1,5 +1,6 @@
 package com.example.ui_demo.Fragments
 
+import android.app.Activity
 import android.app.Dialog
 import android.content.DialogInterface
 import android.os.Bundle
@@ -11,9 +12,15 @@ import android.widget.Button
 import androidx.fragment.app.DialogFragment
 import com.example.ui_demo.R
 
+
+interface HeadlineListener<T : Activity?> : java.io.Serializable{
+    fun onArticleSelected(activity: T, position: Int)
+}
+
 class StartGameDialogFragment() : DialogFragment(){
 
     private lateinit var dialog : Dialog
+    var mCallback: HeadlineListener<*>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -40,10 +47,16 @@ class StartGameDialogFragment() : DialogFragment(){
     }
 
     override fun onCancel(dialog: DialogInterface) {
+        onClickHandler()
         super.onCancel(dialog)
     }
 
     override fun onDismiss(dialog: DialogInterface) {
+        onClickHandler()
         super.onDismiss(dialog)
+    }
+
+    fun onClickHandler() {
+        mCallback?.onArticleSelected(activity as Nothing,2)
     }
 }

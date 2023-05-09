@@ -1,7 +1,6 @@
 package com.example.ui_demo.Activities
 
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -11,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.DialogFragment
 import com.example.ui_demo.Fragments.StartGameDialogFragment
 import com.example.ui_demo.R
+
 
 class Dialogs : AppCompatActivity(), BaseActivity, View.OnClickListener {
 
@@ -37,7 +37,6 @@ class Dialogs : AppCompatActivity(), BaseActivity, View.OnClickListener {
         inflater.inflate(R.menu.custom_menu, menu)
         return true
     }
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -72,16 +71,20 @@ class Dialogs : AppCompatActivity(), BaseActivity, View.OnClickListener {
         customDialogBtnView.setOnClickListener(this)
     }
 
+    fun onArticleSelected(position: Int) {
+        Log.d("Callback","$position")
+    }
+
     override fun onClick(v: View?) {
-        Log.d("View", v.toString())
         when (v) {
             showAlertBtnView -> {
-                customDialog.show()
-//                startGameDialogFragmentView.show(this.supportFragmentManager, "HI")
+//                customDialog.show()
+                startGameDialogFragmentView.show(this.supportFragmentManager, "HI")
             }
             customDialogBtnView -> {
                 customDialog.dismiss()
             }
         }
     }
+
 }
